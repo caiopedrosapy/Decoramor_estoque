@@ -1,0 +1,333 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sistema de Estoque</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <nav>
+
+        <h2>
+            Controle de Estoque
+        </h2>
+
+
+        <ul>
+
+            <li>
+                <a href="#inicio">
+                    Início
+                </a>
+            </li>
+
+            <li>
+                <a href="#produtos">
+                    Produtos
+                </a>
+            </li>
+
+            <li>
+                <a href="#categorias">
+                    Categorias
+                </a>
+            </li>
+
+            <li>
+                <a href="#estoque">
+                    Estoque
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="#"
+                    onclick="sair()"
+                >
+                    Sair
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<section
+    id="inicio"
+    class="hero estoque-hero"
+>
+
+    <div class="overlay">
+
+        <span class="hero-icon">
+            <i class="fa-solid fa-boxes-stacked"></i>
+        </span>
+
+        <h1>
+            Controle de Estoque
+        </h1>
+
+        <p>
+            Organização, controle e praticidade
+            para seus produtos.
+        </p>
+
+        <a
+            href="#produtos"
+            class="btn"
+        >
+            Consultar Produtos
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section id="produtos">
+
+    <div class="container">
+
+        <div class="texto-central">
+
+            <h2>
+                Produtos
+            </h2>
+
+            <p>
+                Consulte os produtos cadastrados
+                no sistema.
+            </p>
+
+        </div>
+
+
+        <div class="cards-consulta">
+
+
+            <div
+                class="card-consulta"
+                onclick="abrirProdutos()"
+            >
+
+                <div class="card-icone">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+                <h3>
+                    Consultar Produtos
+                </h3>
+
+                <p>
+                    Pesquise pelo ID ou nome
+                    do produto.
+                </p>
+
+            </div>
+
+
+            <div
+                class="card-consulta"
+                onclick="abrirCategorias()"
+            >
+
+                <div class="card-icone">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <h3>
+                    Consultar Categorias
+                </h3>
+
+                <p>
+                    Veja os produtos separados
+                    por categoria.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section
+    id="categorias"
+    class="secao-bege"
+>
+
+    <div class="container">
+
+        <div class="texto-central">
+
+            <h2>
+                Categorias
+            </h2>
+
+            <p>
+                Categorias disponíveis no estoque.
+            </p>
+
+        </div>
+
+
+        <div
+            id="listaCategorias"
+            class="categorias-grid"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<section id="estoque">
+
+    <div class="container">
+
+        <div class="texto-central">
+
+            <h2>
+                Estoque
+            </h2>
+
+            <p>
+                Confira todos os produtos cadastrados.
+            </p>
+
+        </div>
+
+
+        <div class="pesquisa-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar produto, ID ou categoria..."
+                oninput="pesquisarProduto()"
+            >
+
+        </div>
+
+
+        <div class="tabela-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Item</th>
+
+                        <th>Categoria</th>
+
+                        <th>Preço</th>
+
+                        <th>Quantidade</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="listaProdutos">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <div>
+
+        <h3>
+            Controle de Estoque
+        </h3>
+
+        <p>
+            Sistema de gerenciamento de produtos
+            e estoque.
+        </p>
+
+        <p class="copyright">
+            © 2026 - Todos os direitos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
